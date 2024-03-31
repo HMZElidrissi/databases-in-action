@@ -10,7 +10,7 @@ import {themes as prismThemes} from 'prism-react-renderer';
 const config = {
   title: 'Databases in Action',
   tagline: 'Welcome to the Databases in Action documentation, a guide to help you learn and master databases.',
-  favicon: 'img/favicon.svg',
+  favicon: 'img/database.svg',
 
   // Set the production url of your site here
   url: 'https://hmzelidrissi.github.io',
