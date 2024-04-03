@@ -17,6 +17,14 @@ The dataset contains details of the world's highest valued media franchises by g
 | Pokémon         | 1996           | 88                 | video game      | The Pokémon Company    | 24       |
 | Disney Princess | 2000           | 45.4               | movie           | The Walt Disney Company| -        |
 
+## SQL Query Execution Order
+
+SQL quires are executed in the following order:
+
+```plaintext
+FROM + JOIN -> WHERE -> GROUP BY -> HAVING -> SELECT -> DISTINCT -> ORDER BY -> LIMIT
+```
+
 ## Simple Queries
 
 ```sql title="Selecting all columns"
@@ -139,4 +147,39 @@ SELECT original_medium, owner, COUNT(*)
 FROM franchises
 GROUP BY original_medium, owner
 HAVING COUNT(*) > 1;
+```
+
+## Limiting Results
+
+```sql title="Limiting the number of groups"
+SELECT original_medium, COUNT(*)
+FROM franchises
+GROUP BY original_medium
+LIMIT 2;
+```
+
+```sql title="Limiting the number of groups and ordering"
+SELECT original_medium, COUNT(*)
+FROM franchises
+GROUP BY original_medium
+ORDER BY COUNT(*) DESC
+LIMIT 2;
+```
+    
+```sql title="Limiting the number of groups and skipping the first N rows"
+SELECT original_medium, COUNT(*)
+FROM franchises
+GROUP BY original_medium
+ORDER BY COUNT(*) DESC
+LIMIT 10 OFFSET 0;
+-- This will retrieve the first 10 rows
+```
+
+```sql title="Limiting the number of groups and skipping the first N rows"
+SELECT original_medium, COUNT(*)
+FROM franchises
+GROUP BY original_medium
+ORDER BY COUNT(*) DESC
+LIMIT 10 OFFSET 5;
+-- This will retrieve 10 rows starting from the 6th row
 ```

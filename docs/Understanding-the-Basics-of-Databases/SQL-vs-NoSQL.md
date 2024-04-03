@@ -47,12 +47,14 @@ NoSQL solutions like MongoDB, Cassandra, and Couchbase don’t use the same rigi
 ### Characteristics of NoSQL Databases
 
 NoSQL databases are characterized by their schemaless design, which allows for the storage and retrieval of data without a predefined schema. This flexibility enables developers to work with diverse and dynamic data types, making NoSQL databases well-suited for applications that require rapid development and frequent changes to data structures.
+![NoSQL databases](./img/NoSQL_Databases.png)
 
 NoSQL databases are typically categorized into four main types:
 - **Document Stores**: Store data in flexible, JSON-like documents (e.g., MongoDB).
 - **Key-Value Stores**: Store data as key-value pairs (e.g., Redis, DynamoDB).
 - **Column-Family Stores**: Store data in columns grouped into families (e.g., Cassandra).
 - **Graph Databases**: Store data in nodes and edges to represent relationships (e.g., Neo4j).
+![Graph Databases](./img/Graphic_Node_Database.png)
 
 ### Advantages of NoSQL
 
