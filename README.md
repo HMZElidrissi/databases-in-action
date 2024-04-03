@@ -1,4 +1,4 @@
-# Laravel in Action
+# Databases in Action
 
 Welcome to my personal documentation repository of Databases. This repository contains various topics, tutorials, and code samples related to Relational Databases, NoSQL Databases, and Database Management Systems.
 
