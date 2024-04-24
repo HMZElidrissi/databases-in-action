@@ -30,6 +30,17 @@ To access the PostgreSQL shell, use the following command:
 sudo su - postgres -c psql
 ```
 
+- `su` is used to switch to the `postgres` user.
+
+```bash title="Access the PostgreSQL shell"
+sudo -i -u postgres
+```
+
+- The default PostgreSQL user is `postgres`, and you can switch to this user to access the PostgreSQL shell.
+- `-i` flag is used to simulate the initial login environment of the user.
+- `-u` flag is used to specify the user to switch to.
+- `psql` is the PostgreSQL interactive terminal.
+
 To access the PostgreSQL shell as a specific user, use the following command:
 
 ```bash
