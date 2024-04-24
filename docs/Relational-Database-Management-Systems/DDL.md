@@ -87,6 +87,46 @@ ALTER TABLE table_name ADD PRIMARY KEY (column_name);
 ALTER TABLE table_name ADD CONSTRAINT constraint_name PRIMARY KEY (column_name);
 ```
 
+```sql title="Adding a foreign key constraint (MySQL)"
+ALTER TABLE table_name ADD FOREIGN KEY (column_name) REFERENCES referenced_table (referenced_column);
+```
+
+```sql title="Adding a foreign key constraint (PostgreSQL)"
+ALTER TABLE table_name ADD CONSTRAINT constraint_name FOREIGN KEY (column_name) REFERENCES referenced_table (referenced_column);
+```
+
+```sql title="Adding a unique constraint (MySQL)"
+ALTER TABLE table_name ADD UNIQUE (column_name);
+```
+
+```sql title="Adding a unique constraint (PostgreSQL)"
+ALTER TABLE table_name ADD CONSTRAINT constraint_name UNIQUE (column_name);
+```
+
+```sql title="Adding a check constraint (MySQL)"
+ALTER TABLE table_name ADD CHECK (column_name > 0);
+```
+
+```sql title="Adding a check constraint (PostgreSQL)"
+ALTER TABLE table_name ADD CONSTRAINT constraint_name CHECK (column_name > 0);
+```
+
+```sql title="Adding a default constraint (MySQL)"
+ALTER TABLE table_name ALTER COLUMN column_name SET DEFAULT default_value;
+```
+
+```sql title="Adding a default constraint (PostgreSQL)"
+ALTER TABLE table_name ALTER COLUMN column_name SET DEFAULT default_value;
+```
+
+```sql title="Adding a not null constraint (MySQL)"
+ALTER TABLE table_name MODIFY COLUMN column_name datatype NOT NULL;
+```
+
+```sql title="Adding a not null constraint (PostgreSQL)"
+ALTER TABLE table_name ALTER COLUMN column_name SET NOT NULL;
+```
+
 ```sql title="Dropping a constraint (MySQL)"
 ALTER TABLE table_name DROP PRIMARY KEY;
 ```
